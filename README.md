@@ -7,3 +7,9 @@ guest:guest@localhost:5672 is the default username:password@hostname:port for Ra
 ## Simulation slow subscriber
 ![Simulation slow subscriber](/assets/img/ss1.png)
 In my case the queued messages touched 25 messages, that means after we add 1 second delay on the subscriber, the subscriber will delay 1 second to receive the message from message broker.
+
+## Reflection and Running at least three subscribers
+![Subscriber POV](/assets/img/ss3.png)
+![RabbirMQ POV](/assets/img/ss2.png)
+
+Based on queued message chart, there are some improvement after running the publisher 5 times comparing to 1 subscriber when we run 3 subscribers. The queued message is not touched 25 messages anymore, it's only touched 15 messages. That means the subscriber is able to receive the message faster than before.
